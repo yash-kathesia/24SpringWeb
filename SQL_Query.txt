@@ -1,0 +1,57 @@
+create database springmix;
+
+
+
+use springmix; 
+
+create table users (
+	userId integer primary key auto_increment,
+	firstName varchar(30),
+	email varchar(30),
+	password varchar(255)
+
+);
+
+
+show tables; 
+
+
+desc users;
+
+
+insert into users(firstName,email,password) values ('rock','rock@gmail.com','rock123');
+
+
+ ------------------------------------------
+ 
+ create table products(
+ 	productId integer primary key auto_increment,
+ 	productName varchar(30),
+ 	category varchar(30),
+ 	qty int,
+ 	price float
+ );
+ 
+ 
+select * from products; 
+
+ 
+ 
+ -----------------------------------
+ 
+ delete from tablename; 
+ 
+ delete from products; ==> remove all records 
+ 
+ delete from products where productId = 1
+
+ -----------------------------------
+ 
+ create table cart (
+ 	cartId int primary key auto_increment,
+ 	productId int, 
+ 	userId int  
+ );
+ 
+ ------------------------------------------- 
+ 

@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.bean.UserBean;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
 public class SessionController {
