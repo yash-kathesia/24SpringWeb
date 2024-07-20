@@ -62,7 +62,7 @@ public class EUserSessionController {
 	public String logout(HttpSession session) {
 
 		session.invalidate();
-		return "";
+		return "redirect:/elogin";
 	}
 
 }
