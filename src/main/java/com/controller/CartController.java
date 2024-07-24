@@ -44,5 +44,14 @@ public class CartController {
 		model.addAttribute("products", products);
 		return "MyCart";
 	}
+	
+	
+	@GetMapping("/removecartitem")
+	public String removeCartItem(@RequestParam("productId") Integer productId,HttpSession session) {
+		EComUserBean userBean = (EComUserBean)session.getAttribute("user");
+		Integer userId = userBean.getUserId();
+		cartDao.removeItem(productId,userId);
+		return "redirect:/mycart";
+	}
 
 }

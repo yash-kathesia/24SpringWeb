@@ -26,4 +26,10 @@ public class CartDao {
 		return products;
 	}
 
+	public void removeItem(Integer productId, Integer userId) {
+		// delete from cart where userId = ? and productId = ?
+		stmt.update("delete from cart where userId = ? and productId = ?",userId,productId);
+	}
+	
+	
 }

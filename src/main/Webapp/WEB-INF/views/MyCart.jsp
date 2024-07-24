@@ -9,7 +9,7 @@
 <title>View Your Cart</title>
 </head>
 <body>
-	<h2>My Cart</h2>
+	<h2>My Cart Page</h2>
 
 	<%
 	List<EProductBean> products = (List<EProductBean>) request.getAttribute("products");
@@ -30,7 +30,7 @@
 			out.print("<td>" + p.getProductId() + "</td><td>" + p.getProductName() + "</td>");
 			out.print("<td><img height='100px' width='100px' src='" + p.getProductImagePath() + "'/></td>");
 			out.print("<td>" + p.getPrice() + "</td>");
-			out.print("<td><a href='removecartitem'>Remove</a></td>");
+			out.print("<td><a href='removecartitem?productId="+p.getProductId()+"'>Remove</a></td>");
 
 			out.print("</tr>");
 			price = price + p.getPrice();
@@ -42,8 +42,8 @@
 	<br /> Total Price :
 	<%=price%>
 
-	<br>
-	<Br>
+	<br />
+	<br />
 	<a href="checkout">Checkout</a>
 
 
